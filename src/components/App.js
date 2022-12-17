@@ -6,14 +6,9 @@ const App = () => {
     const [inputValue, setInputValue] = useState("");
     const [results, setResult] = useState(null);
 
-    function handleClick(e) {
-        setInputValue(e.target.value);
-    }
+    function handleClick(e) {}
 
-    function handleChange(e) {
-        e.preventDefault();
-        setResult(movies(inputValue));
-    }
+    function handleChange(e) {}
 
     return (
         <div id="main">
@@ -26,6 +21,7 @@ const App = () => {
                 ></input>
                 <button id="button" onClick={handleClick}>
                     Search
+                    
                 </button>
             </form>
             <div id="result">
