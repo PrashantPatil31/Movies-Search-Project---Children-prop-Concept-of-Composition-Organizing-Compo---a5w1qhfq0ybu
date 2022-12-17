@@ -6,12 +6,13 @@ const App = () => {
     const [inputValue, setInputValue] = useState("");
     const [results, setResult] = useState(null);
 
-    function handleClick(e) {}
+    function handleClick(e) {
+        setInputValue(e.target.value);
+    }
 
     function handleChange(e) {
-        const {value} = e.target;
-        console.log(value);
-        setInputValue(value);
+        e.preventDefault();
+        setResult(movies(inputValue));
     }
 
     return (
